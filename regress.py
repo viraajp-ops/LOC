@@ -2,14 +2,8 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
-# Load the uploaded CSV file
 file_path = "delhivery.csv"
 df = pd.read_csv(file_path)
-
-# Show the first few rows and column names to understand the data
-df.head(), df.columns
-
-
 # Drop rows with missing values in the relevant column
 df_clean = df.dropna(subset=['actual_distance_to_destination'])
 
